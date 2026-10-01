@@ -119,9 +119,11 @@ function initHero() {
     renderer.render(scene, camera);
   }
 
-  if (prefersReduced) {
-    draw(0); // 静态渲染一帧即可
-  } else {
+  // 先同步渲染一帧 —— 保证在任何环境下都有画面，
+  // 不依赖 requestAnimationFrame 是否被触发（部分无头/省电模式会限制 rAF）
+  draw(0);
+
+  if (!prefersReduced) {
     (function loop() {
       requestAnimationFrame(loop);
       if (visible) draw(clock.getElapsedTime());
