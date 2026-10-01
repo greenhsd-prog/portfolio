@@ -1,0 +1,7 @@
+# 开发期验证工具，不需要进仓库
+_tools/
+
+# 系统与依赖
+node_modules/
+.DS_Store
+Thumbs.db

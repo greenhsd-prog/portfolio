@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THREE.SHOWCASE · Three.js 互动网站案例库与学习路径</title>
+<meta name="description" content="19 个已核实的获奖级 Three.js / WebGL 互动营销网站案例，附真实技术栈、可访问网址与从零到进阶的学习路径。">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.className += ' js';</script>
+<script type="importmap">
+{
+  "imports": {
+    "three": "./lib/three.module.min.js"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">THREE<span>.</span>SHOWCASE</a>
+    <nav class="links">
+      <a href="#cases">案例</a>
+      <a href="#stack">技术栈</a>
+      <a href="#learn">学习路径</a>
+      <a href="#judge">评审标准</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">WebGL / Three.js 互动网站案例库</p>
+    <h1>把网页，<br>做成一个可以走进去的空间。</h1>
+    <p class="lead">收录 <b>19 个</b>已核实可访问的获奖级 3D 互动网站，每个都标注真实技术栈与网址。不搬运他人截图，只做导流与拆解 —— 想学，直接去原件看。</p>
+    <div class="btns">
+      <a class="btn primary" href="#cases">开始看案例</a>
+      <a class="btn" href="#learn">我要学怎么做</a>
+    </div>
+    <dl class="stats">
+      <div><dt>案例</dt><dd>19</dd></div>
+      <div><dt>学习资源</dt><dd>12</dd></div>
+      <div><dt>当前版本</dt><dd>r186</dd></div>
+      <div><dt>核实日期</dt><dd>10-01</dd></div>
+    </dl>
+  </div>
+  <p class="scroll-hint" aria-hidden="true">向下滚动</p>
+</section>
+
+<!-- ============ 案例库 ============ -->
+<section id="cases" class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>案例库</h2>
+      <p>按技术栈筛选。每张卡片右下角都能直接跳到原站 —— 建议用桌面浏览器打开，很多效果手机上会降级。</p>
+    </div>
+
+    <div class="filter-bar" data-filter-bar role="group" aria-label="按技术栈筛选">
+      <button data-filter="all" class="is-on" type="button">全部</button>
+      <button data-filter="threejs" type="button">Three.js</button>
+      <button data-filter="gsap" type="button">GSAP</button>
+      <button data-filter="glsl" type="button">GLSL</button>
+      <button data-filter="webgpu" type="button">WebGPU / TSL</button>
+      <button data-filter="audio" type="button">Web Audio</button>
+      <span class="filter-count">显示 <b data-count>19</b> 个</span>
+    </div>
+
+    <div class="case-grid">
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs glsl gsap lenis audio">
+        <div class="case-head"><span class="idx">01</span><span class="cat">品牌营销</span></div>
+        <h3>Cartier · Watches &amp; Wonders</h3>
+        <p>六个自成一体的 3D 壁龛，每款腕表一个。滚动不是向下翻页，而是在展厅之间移动；Web Audio 当作叙事层，隐藏手势奖励好奇心。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i><i data-s="glsl">GLSL</i><i data-s="gsap">GSAP</i><i data-s="lenis">Lenis</i></div>
+        <a class="visit" href="https://www.cartier.com/en-fr/watchesandwonders" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs">
+        <div class="case-head"><span class="idx">02</span><span class="cat">品牌营销</span></div>
+        <h3>Oryzo</h3>
+        <p>Lusion 出品，给一个软木杯垫做出旗舰产品的庄重感。核心是单个主体的重量与惯性 —— 滚动时移动的是摄像机在真实 Z 轴上穿行，不是滑动 2D 图层。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i></div>
+        <a class="visit" href="https://oryzo.ai/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="webgpu tsl">
+        <div class="case-head"><span class="idx">03</span><span class="cat">品牌营销</span></div>
+        <h3>IVRESS</h3>
+        <p>一次编写、同时编译到 WebGPU 与 WebGL 两套后端。运动刻意克制，场景图经过严格预算而非暴力堆砌，像一部没有旁白的短片。</p>
+        <div class="stacks"><i data-s="webgpu">WebGPU</i><i data-s="tsl">TSL</i></div>
+        <a class="visit" href="https://brand.ivress.co.jp/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs gsap">
+        <div class="case-head"><span class="idx">04</span><span class="cat">产品发布</span></div>
+        <h3>Shopify Editions</h3>
+        <p>把枯燥的功能更新日志变成电影感的分段故事。粒子消散的文字、深度分层面板、精心编排的转场 —— 内容极密的页面仍是一个完整作品。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i><i data-s="gsap">GSAP</i></div>
+        <a class="visit" href="https://www.shopify.com/editions/spring2026" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs">
+        <div class="case-head"><span class="idx">05</span><span class="cat">游戏化营销</span></div>
+        <h3>Lacoste · Ace Breaker</h3>
+        <p>品牌化的浏览器 3D 游戏。玩法动词单一、易读性强，配合排行榜与真实奖品（赛事门票、polo 衫）驱动复玩 —— 营销目标被直接写进机制里。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i></div>
+        <a class="visit" href="https://members-play.lacoste.com/ace-breaker-rg/gb/en/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs gsap">
+        <div class="case-head"><span class="idx">06</span><span class="cat">地产 / 空间</span></div>
+        <h3>Hubtown</h3>
+        <p>发光的 3D 巨碑悬浮在黑暗反光的地表之上，把四十年的房产组合呈现成电影级体验。标志性的鼠标揭示交互：光标扫过处才显出几何与光照的细节。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i><i data-s="gsap">GSAP</i></div>
+        <a class="visit" href="https://hubtown.co.in/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs">
+        <div class="case-head"><span class="idx">07</span><span class="cat">旅游 / 度假</span></div>
+        <h3>Explore Primland</h3>
+        <p>真实地形渲染配合大气雾效，摄像机随滚动在蓝岭山脉上空滑行。把"地点"变成可以导航的世界，而不是一个照片画廊。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i></div>
+        <a class="visit" href="https://explore.ownprimland.com/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="gsap">
+        <div class="case-head"><span class="idx">08</span><span class="cat">工作室官网</span></div>
+        <h3>By-Kin</h3>
+        <p>四项大奖在手（含 Awwwards Developer Award，专评工程功力）。自信的编辑排版、有重量感的平滑滚动，转场从不抢戏，却让整站像一整块连续表面。</p>
+        <div class="stacks"><i data-s="gsap">GSAP</i><i data-s="next">Next.js</i></div>
+        <a class="visit" href="https://by-kin.com/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs gsap">
+        <div class="case-head"><span class="idx">09</span><span class="cat">活动 / 展览</span></div>
+        <h3>Iventions</h3>
+        <p>每个项目都被当成一件打了聚光灯的装置来处理。GSAP 控制揭示节奏，页面读起来像一次有人带路的参观 —— WebGL 用来做氛围，而不是炫技。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i><i data-s="gsap">GSAP</i></div>
+        <a class="visit" href="https://iventions.com/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs gsap">
+        <div class="case-head"><span class="idx">10</span><span class="cat">设计师作品集</span></div>
+        <h3>Minh Pham</h3>
+        <p>回答了一个关键问题：WebGL 能不能保持克制？答案是能 —— 3D 始终在为作品做框，从不压过作品本身。开发评分 7.77。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i><i data-s="gsap">GSAP</i></div>
+        <a class="visit" href="https://minhpham.design/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="gsap">
+        <div class="case-head"><span class="idx">11</span><span class="cat">动态字体</span></div>
+        <h3>Mat Voyce</h3>
+        <p>作者是英国顶尖的动态字体艺术家（FT、百事、UEFA、Nike 的活都做过）。整站就是"文字在运动"：字母拉伸、弹回、重组，全部时间线驱动，且绝不打断阅读。</p>
+        <div class="stacks"><i data-s="gsap">GSAP</i></div>
+        <a class="visit" href="https://matvoyce.tv/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="gsap">
+        <div class="case-head"><span class="idx">12</span><span class="cat">工作室官网</span></div>
+        <h3>Uncommon Studio</h3>
+        <p>赢在节奏：自信的网格在恰好的位置打破，区块之间的转场像镜头运动。证明了"创意工作室网站"不等于"又慢又自恋"。</p>
+        <div class="stacks"><i data-s="gsap">GSAP</i></div>
+        <a class="visit" href="https://uncommonstudio.com.au/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs">
+        <div class="case-head"><span class="idx">13</span><span class="cat">沉浸体验</span></div>
+        <h3>Sleep Well Creative</h3>
+        <p>把睡眠科学内容包进一个梦幻的插画风 3D 世界，随滚动穿行其中。读起来像一篇会动的社论，每个滚动节拍同时推进叙事和视觉。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i></div>
+        <a class="visit" href="https://sleep-well-creatives.com/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs">
+        <div class="case-head"><span class="idx">14</span><span class="cat">经典必看</span></div>
+        <h3>Bruno Simon</h3>
+        <p>学 Three.js 的人绕不过的一座山。你开着一辆吉普车在他的作品集里到处跑 —— 物理、光照、碰撞全在一个网页里，而且流畅。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i></div>
+        <a class="visit" href="https://bruno-simon.com/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs glsl">
+        <div class="case-head"><span class="idx">15</span><span class="cat">技术天花板</span></div>
+        <h3>Lusion</h3>
+        <p>当今最有影响力的 WebGL / 着色器工作室之一。粒子系统与材质工作是研究级的 —— 如果你在学 GLSL，这里是标准答案库。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i><i data-s="glsl">GLSL</i></div>
+        <a class="visit" href="https://lusion.co/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs glsl">
+        <div class="case-head"><span class="idx">16</span><span class="cat">技术天花板</span></div>
+        <h3>Active Theory</h3>
+        <p>生产级 3D 的参考点：规模大、实时渲染，而且照样能发到手机上跑。品牌级沉浸式体验的常青树。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i><i data-s="glsl">GLSL</i></div>
+        <a class="visit" href="https://activetheory.net/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="threejs">
+        <div class="case-head"><span class="idx">17</span><span class="cat">技术天花板</span></div>
+        <h3>Resn</h3>
+        <p>角色驱动的互动体验，有鲜明的幽默感和手工感。长期占据各类奖项候选名单 —— 证明技术也可以很有性格。</p>
+        <div class="stacks"><i data-s="threejs">Three.js</i></div>
+        <a class="visit" href="https://resn.co.nz/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="gsap">
+        <div class="case-head"><span class="idx">18</span><span class="cat">编辑排版</span></div>
+        <h3>Obys Agency</h3>
+        <p>编辑级美术指导与字体动效的标杆。判断标准很简单：把动画全关掉，静帧依然像一张海报。</p>
+        <div class="stacks"><i data-s="gsap">GSAP</i></div>
+        <a class="visit" href="https://obys.agency/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+      <article class="case reveal" data-case data-tilt data-stack="gsap">
+        <div class="case-head"><span class="idx">19</span><span class="cat">字体主导</span></div>
+        <h3>Unseen Studio</h3>
+        <p>精炼的字体主导动效设计，节奏无可挑剔 —— 一堂关于"克制如何读成高级"的示范课。</p>
+        <div class="stacks"><i data-s="gsap">GSAP</i></div>
+        <a class="visit" href="https://unseen.co/" target="_blank" rel="noopener">访问原站</a>
+      </article>
+
+    </div>
+
+    <p class="empty" data-empty hidden>这个技术栈下暂时没有案例，换个筛选条件试试。</p>
+  </div>
+</section>
+
+<!-- ============ 技术栈 ============ -->
+<section id="stack" class="section soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>技术栈拆解</h2>
+      <p>获奖站不是"用了 Three.js"这么简单，通常是一套组合拳。下面按你在项目里会遇到的顺序排列。</p>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-card reveal">
+        <h3>Three.js</h3>
+        <p class="tag">渲染核心</p>
+        <p>把 WebGL 的底层 API 包成场景图。Camera、Scene、Mesh、Material —— 学会这四个概念就能开始做东西。当前版本 <b>r186</b>。</p>
+      </div>
+      <div class="stack-card reveal">
+        <h3>WebGL / WebGPU</h3>
+        <p class="tag">底层图形接口</p>
+        <p>WebGL 是过去十年的标准；WebGPU 是新一代，性能与计算能力更强。Three.js 已支持双后端，可以渐进迁移。</p>
+      </div>
+      <div class="stack-card reveal">
+        <h3>TSL</h3>
+        <p class="tag">着色器新写法</p>
+        <p>Three.js Shading Language。用 JS 写着色器，一次编写同时编译到 WebGPU 与 WebGL —— 不用再手写两套 GLSL。</p>
+      </div>
+      <div class="stack-card reveal">
+        <h3>GLSL</h3>
+        <p class="tag">着色器语言</p>
+        <p>真正决定画面质感的层。粒子、溶解、流体、材质反射，都在这层。想要"研究级"的效果，绕不开它。</p>
+      </div>
+      <div class="stack-card reveal">
+        <h3>GSAP</h3>
+        <p class="tag">动效时间线</p>
+        <p>事实标准。滚动触发、时间线编排、缓动曲线 —— 案例里那些"有导演的运动"，多半是它排的。</p>
+      </div>
+      <div class="stack-card reveal">
+        <h3>Lenis</h3>
+        <p class="tag">平滑滚动</p>
+        <p>轻量的惯性滚动库。它负责把滚轮输入变成有重量感的位移，是 3D 滚动叙事的常见底座。</p>
+      </div>
+      <div class="stack-card reveal">
+        <h3>React Three Fiber</h3>
+        <p class="tag">React 封装</p>
+        <p>用组件的方式写 Three.js 场景。适合产品页和作品集这类结构规整的项目；追求极致定制时，还是会回到原生 Three.js。</p>
+      </div>
+      <div class="stack-card reveal">
+        <h3>Blender / Spline</h3>
+        <p class="tag">建模与产出</p>
+        <p>模型在三维软件里做，导出 glTF / GLB 进网页。Spline 是浏览器里的无代码 3D 工具，做简单场景很快。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 学习路径 ============ -->
+<section id="learn" class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>学习路径</h2>
+      <p>按顺序走。跳步是这个领域最常见的浪费时间的方式。</p>
+    </div>
+
+    <ol class="path">
+      <li class="reveal">
+        <span class="step">01</span>
+        <div>
+          <h3>先把基础图形概念打通</h3>
+          <p>坐标系、相机、投影、光照、材质。不需要写代码，先能在脑子里想象出"三维空间里发生了什么"。</p>
+          <p class="res"><a href="https://threejs.org/manual/" target="_blank" rel="noopener">Three.js 官方手册</a> · <a href="https://threejs.org/docs/" target="_blank" rel="noopener">官方文档</a></p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="step">02</span>
+        <div>
+          <h3>跟着系统课程走一遍</h3>
+          <p>碎片化教程最大的问题是缺上下文。找一门有完整项目的课，从头跟到尾，把整条链路走通一次。</p>
+          <p class="res"><a href="https://threejs-journey.com/" target="_blank" rel="noopener">Three.js Journey</a>（付费，公认入门首选）</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="step">03</span>
+        <div>
+          <h3>泡在官方 Examples 里</h3>
+          <p>几百个可运行示例，每个都能看源码。别通读 —— 带着具体问题去找，比如"我想要一个溶解效果"。</p>
+          <p class="res"><a href="https://threejs.org/examples/" target="_blank" rel="noopener">Three.js Examples</a></p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="step">04</span>
+        <div>
+          <h3>学着色器</h3>
+          <p>从"能改参数"到"能写出效果"的分水岭。这一步很慢，但跨过去之后你和普通前端就不在一个赛道了。</p>
+          <p class="res"><a href="https://thebookofshaders.com/" target="_blank" rel="noopener">The Book of Shaders</a> · <a href="https://www.shadertoy.com/" target="_blank" rel="noopener">Shadertoy</a></p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="step">05</span>
+        <div>
+          <h3>补上动效与滚动编排</h3>
+          <p>3D 只是舞台，让观众走完全程的是运动节奏。学会用时间线编排转场、用滚动驱动叙事。</p>
+          <p class="res"><a href="https://gsap.com/" target="_blank" rel="noopener">GSAP 官方文档</a> · <a href="https://tympanus.net/Development/" target="_blank" rel="noopener">Codrops 前沿 Demo</a></p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="step">06</span>
+        <div>
+          <h3>解决"能跑"和"跑得好"的差距</h3>
+          <p>绝大多数人卡在这：本地很顺，一上手机就掉帧。压缩模型、压纹理、控制绘制调用、做降级方案。</p>
+          <p class="res"><a href="https://gltf-transform.dev/" target="_blank" rel="noopener">glTF Transform</a> · <a href="https://polyhaven.com/" target="_blank" rel="noopener">Poly Haven</a>（免费 HDRI / 贴图）· <a href="https://sketchfab.com/" target="_blank" rel="noopener">Sketchfab</a>（模型库）</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="step">07</span>
+        <div>
+          <h3>去官方论坛提问</h3>
+          <p>遇到卡点先搜论坛，八成有人问过。提问时带上最小可复现示例，回复质量会高很多。</p>
+          <p class="res"><a href="https://discourse.threejs.org/" target="_blank" rel="noopener">Three.js 官方论坛</a> · <a href="https://github.com/mrdoob/three.js" target="_blank" rel="noopener">GitHub 源码</a></p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="res-table reveal">
+      <h3>资源速查</h3>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>资源</th><th>地址</th><th>用途</th></tr></thead>
+          <tbody>
+            <tr><td>Three.js 官方文档</td><td><a href="https://threejs.org/docs/" target="_blank" rel="noopener">threejs.org/docs</a></td><td>API 查询</td></tr>
+            <tr><td>官方手册</td><td><a href="https://threejs.org/manual/" target="_blank" rel="noopener">threejs.org/manual</a></td><td>概念入门</td></tr>
+            <tr><td>官方 Examples</td><td><a href="https://threejs.org/examples/" target="_blank" rel="noopener">threejs.org/examples</a></td><td>效果抄作业</td></tr>
+            <tr><td>官方论坛</td><td><a href="https://discourse.threejs.org/" target="_blank" rel="noopener">discourse.threejs.org</a></td><td>提问</td></tr>
+            <tr><td>Three.js Journey</td><td><a href="https://threejs-journey.com/" target="_blank" rel="noopener">threejs-journey.com</a></td><td>系统课程</td></tr>
+            <tr><td>GSAP</td><td><a href="https://gsap.com/" target="_blank" rel="noopener">gsap.com</a></td><td>动效</td></tr>
+            <tr><td>React Three Fiber</td><td><a href="https://docs.pmnd.rs/react-three-fiber" target="_blank" rel="noopener">docs.pmnd.rs/react-three-fiber</a></td><td>React 场景</td></tr>
+            <tr><td>The Book of Shaders</td><td><a href="https://thebookofshaders.com/" target="_blank" rel="noopener">thebookofshaders.com</a></td><td>着色器入门</td></tr>
+            <tr><td>Shadertoy</td><td><a href="https://www.shadertoy.com/" target="_blank" rel="noopener">shadertoy.com</a></td><td>着色器灵感</td></tr>
+            <tr><td>Codrops</td><td><a href="https://tympanus.net/Development/" target="_blank" rel="noopener">tympanus.net/Development</a></td><td>前沿 Demo</td></tr>
+            <tr><td>Poly Haven</td><td><a href="https://polyhaven.com/" target="_blank" rel="noopener">polyhaven.com</a></td><td>免费 HDRI / 贴图</td></tr>
+            <tr><td>glTF Transform</td><td><a href="https://gltf-transform.dev/" target="_blank" rel="noopener">gltf-transform.dev</a></td><td>模型压缩</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 评审标准 ============ -->
+<section id="judge" class="section soft">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>什么样的站能拿奖</h2>
+      <p>以下框架来自一位 Awwwards 评委的公开拆解。它同时也是你自己做项目时最好的自查清单。</p>
+    </div>
+    <div class="judge-grid">
+      <div class="judge-card reveal">
+        <span class="num">01</span>
+        <h3>艺术指导</h3>
+        <p>有没有"一个观点"。获奖站不是被装饰过的模板 —— 每个字体选择、配色、栅格都在服务同一个想法。</p>
+        <p class="check"><b>自查：</b>把动画全关掉，截一张静帧。它还好看吗？如果不好看，说明是动效在掩盖薄弱的美术方向。</p>
+      </div>
+      <div class="judge-card reveal">
+        <span class="num">02</span>
+        <h3>被导演的运动</h3>
+        <p>不是"为了动而动"，是编排。转场承载意义、滚动序列控制叙事节奏、微交互奖励注意力。</p>
+        <p class="check"><b>自查：</b>盯着状态之间的过渡看，而不是盯着页面。廉价站是"切"，获奖站是"移"。</p>
+      </div>
+      <div class="judge-card reveal">
+        <span class="num">03</span>
+        <h3>性能</h3>
+        <p>这是大多数"还行"的站死掉的地方。评委是在真机上测的 —— 中端安卓掉到 18fps，就不会赢。</p>
+        <p class="check"><b>自查：</b>DevTools → Performance → CPU 4 倍降速 + Fast 3G。还能守住 60fps 吗？</p>
+      </div>
+    </div>
+    <p class="judge-note reveal">三项缺一项，分数就卡在中段。三项全中，才进入获奖区间。美感在 60fps 上成立 —— 这就是全部功课。</p>
+  </div>
+</section>
+
+<!-- ============ 页脚 ============ -->
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <div>
+      <p class="foot-brand">THREE.SHOWCASE</p>
+      <p class="foot-note">案例信息整理自公开策展报道，全部网址于 <b>2026-10-01</b> 实测可访问。个别站点对命令行访问返回 403（反爬拦截），浏览器可正常打开。</p>
+      <p class="foot-note">本站只收录链接与拆解，不转载任何站点的截图与素材 —— 版权归各原作者所有。</p>
+    </div>
+    <div class="foot-meta">
+      <p>Three.js <b>r186</b></p>
+      <p>本站用原生 Three.js 手写，依赖已本地化</p>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<script type="module" src="main.js"></script>
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a[href^="#"]');
+  if (!a) return;
+  var el = document.querySelector(a.getAttribute('href'));
+  if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+});
+</script>
+
+</body>
+</html>
